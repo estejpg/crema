@@ -170,7 +170,13 @@ p { margin: 0 0 1em; }
   font-family: var(--font-brand);
   font-size: 1.5rem;
   line-height: 1;
-  transform: translateY(-2px);
+  /* Optical centring, not geometric. Flexbox centres the line box, but
+     Genty's em box is lopsided (ascent 920 / descent 525 per 1000 units)
+     and "crema" is all x-height letters, so its ink mass lands above the
+     box centre even when the box itself is centred. Measured against the
+     nav links' ink centre, this offset brings the two to within 0.2px.
+     Re-measure if the wordmark's font size or the nav font changes. */
+  transform: translateY(2px);
 }
 .nav-links {
   display: flex;
