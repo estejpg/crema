@@ -21,7 +21,9 @@ Deployable anywhere, GitHub Pages ready (just serve the repo root).
 ## Brand
 
 - **Palette:** pale lemon cream `#F5F0CA`, rich mahogany `#371004`, white `#FFFFFF`, black `#000000`
-- **Type:** Genty (display), Teachers (body), Inter Italic (accents), self-hosted woff2 in `assets/fonts/`
+- **Type:** Fraunces (headings), Genty (wordmark only), Teachers (body), Inter Italic (accents). All self-hosted woff2 in `assets/fonts/`.
+  - Fraunces is a variable font with the optical-size and weight axes live; `SOFT` is pinned at 100 and `WONK` at 1, which is the cut that matches the wordmark's roundness. Pinning those two dropped the file from 114KB to 73KB. Licensed OFL (`assets/fonts/Fraunces-OFL.txt`).
+  - Genty is deliberately confined to the logo lockup (`--font-brand`). It is single-weight and has no accented glyphs, so it cannot set `Crèma` or work as a heading face. It is also licensed separately from the OFL fonts here; confirm the license covers webfont embedding before widening its use.
 - **Logo:** supplied SVG marks in `assets/logo/` (recolored only within the approved palette, never redrawn or distorted)
 - **Photography:** selected from the cafe's Instagram archive, optimized for web in `assets/img/`
 
