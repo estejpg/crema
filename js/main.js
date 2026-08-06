@@ -1,4 +1,4 @@
-// crèma — shared interactions
+// crema · shared interactions
 
 // Mobile nav toggle
 const toggle = document.querySelector(".nav-toggle");
@@ -31,14 +31,14 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// Newsletter (no backend — friendly confirmation)
+// Newsletter (no backend, friendly confirmation)
 const form = document.querySelector(".newsletter form");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const input = form.querySelector("input");
     if (input && input.value.trim()) {
-      form.innerHTML = "<p style='font-weight:700;margin:0'>you're on the list — see you at the bar ☕</p>";
+      form.innerHTML = "<p style='font-weight:700;margin:0'>you're on the list, see you at the bar ☕</p>";
     }
   });
 }

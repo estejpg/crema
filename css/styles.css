@@ -1,5 +1,5 @@
 /* ============================================================
-   crèma — Sherman Oaks
+   crema · Sherman Oaks
    Warm, contemporary, editorial. Four colors, no noise.
    ============================================================ */
 
@@ -95,7 +95,7 @@ p { margin: 0 0 1em; }
 }
 
 /* ============================================================
-   Nav — floating pill bar (a nod to Couplet)
+   Nav: floating pill bar (a nod to Couplet)
    ============================================================ */
 .site-header {
   position: sticky;
@@ -201,11 +201,20 @@ p { margin: 0 0 1em; }
 }
 .ticker-track {
   display: flex;
-  gap: 3rem;
   white-space: nowrap;
   padding: 0.55rem 0;
   animation: ticker 28s linear infinite;
   width: max-content;
+}
+/* Two identical groups; the track shifts exactly one group-width (-50%),
+   so the loop restarts on identical pixels — no visible seam. The trailing
+   gap lives INSIDE each group (padding-right) so spacing stays constant
+   across the loop boundary. */
+.ticker-group {
+  display: flex;
+  gap: 3rem;
+  padding-right: 3rem;
+  flex-shrink: 0;
 }
 .ticker span {
   font-family: var(--font-accent);
@@ -523,7 +532,7 @@ p { margin: 0 0 1em; }
 .pattern-band img { width: 100%; object-fit: cover; object-position: center; }
 
 /* ============================================================
-   Footer — deep mahogany, columns + newsletter (a nod to Stumptown)
+   Footer: deep mahogany, columns + newsletter (a nod to Stumptown)
    ============================================================ */
 .site-footer {
   background: var(--mahogany);
