@@ -199,12 +199,18 @@ p { margin: 0 0 1em; }
   color: var(--cream);
   margin-top: 1.25rem;
 }
+.ticker {
+  /* Same pattern as estejpg-site's AppStackMarquee: one CSS variable
+     drives the loop duration (track shifts -50% per cycle). */
+  --marquee-duration: 180s;
+}
 .ticker-track {
   display: flex;
   white-space: nowrap;
   padding: 0.55rem 0;
-  animation: ticker 28s linear infinite;
+  animation: ticker var(--marquee-duration, 180s) linear infinite;
   width: max-content;
+  will-change: transform;
 }
 /* Two identical groups; the track shifts exactly one group-width (-50%),
    so the loop restarts on identical pixels — no visible seam. The trailing
