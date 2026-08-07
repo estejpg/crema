@@ -626,7 +626,7 @@ p { margin: 0 0 1em; }
   min-height: min(70vh, 620px);
   display: grid;
   align-items: end;
-  color: var(--cream);
+  color: var(--white);
   overflow: hidden;
 }
 .image-band__media {
@@ -650,7 +650,7 @@ p { margin: 0 0 1em; }
 }
 .image-band__content h2 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  color: var(--cream);
+  color: var(--white);
   max-width: 16ch;
 }
 .image-band__content p {
