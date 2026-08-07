@@ -134,33 +134,35 @@ p { margin: 0 0 1em; }
   margin-bottom: 0.75rem;
   display: inline-block;
 }
-.kicker.light { color: var(--cream); opacity: 0.9; }
+.kicker.light { color: var(--white); opacity: 0.9; }
 
 /* ============================================================
    Announcement bar
    ============================================================ */
 .announcement-bar {
   background: var(--mahogany);
-  color: var(--cream);
+  color: var(--white);
   position: relative;
   z-index: 60;
-  border-bottom: 1px solid rgba(245, 240, 202, 0.18);
 }
 .announcement-bar__inner {
   position: relative;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding: 0.35rem var(--pad);
+  padding: 0.3rem 2.25rem;
   text-align: center;
-  min-height: 1.75rem;
+  min-height: 1.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .announcement-bar__announcements {
   position: relative;
-  min-height: 1.15em;
   width: 100%;
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .announcement {
   position: absolute;
@@ -170,15 +172,12 @@ p { margin: 0 0 1em; }
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(6px);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s 0.35s;
+  transition: opacity 0.55s ease, visibility 0s 0.55s;
 }
 .announcement.is-active {
-  position: relative;
   opacity: 1;
   visibility: visible;
-  transform: none;
-  transition: opacity 0.45s ease 0.1s, transform 0.45s ease 0.1s;
+  transition: opacity 0.55s ease;
 }
 .announcement__link {
   color: inherit;
@@ -188,6 +187,7 @@ p { margin: 0 0 1em; }
   font-size: 0.7rem;
   letter-spacing: 0.03em;
   line-height: 1.2;
+  text-align: center;
 }
 .announcement__link:hover { opacity: 0.85; }
 .announcement-bar__controls {
@@ -211,7 +211,7 @@ p { margin: 0 0 1em; }
   border: 0;
   padding: 0.35rem;
   cursor: pointer;
-  color: var(--cream);
+  color: var(--white);
   display: grid;
   place-items: center;
 }
@@ -283,11 +283,11 @@ p { margin: 0 0 1em; }
   transition: background 0.18s ease, color 0.18s ease;
 }
 .nav-links a:hover { background: rgba(55, 16, 4, 0.06); }
-.nav-links a.active { background: var(--mahogany); color: var(--cream); }
+.nav-links a.active { background: var(--mahogany); color: var(--white); }
 .nav-cta {
   margin-left: 0.25rem;
   background: var(--mahogany);
-  color: var(--cream) !important;
+  color: var(--white) !important;
   border: 2px solid var(--mahogany);
 }
 .nav-links a.nav-cta:hover {
@@ -344,7 +344,7 @@ p { margin: 0 0 1em; }
   min-height: min(92vh, 820px);
   display: grid;
   align-items: end;
-  color: var(--cream);
+  color: var(--white);
   overflow: hidden;
 }
 .hero-bleed__media {
@@ -355,14 +355,14 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 45%;
 }
 .hero-bleed__shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(55, 16, 4, 0.28) 0%, rgba(55, 16, 4, 0.12) 35%, rgba(55, 16, 4, 0.55) 100%),
-    radial-gradient(ellipse at 30% 20%, rgba(245, 240, 202, 0.12), transparent 50%);
+    linear-gradient(180deg, rgba(55, 16, 4, 0.28) 0%, rgba(55, 16, 4, 0.12) 35%, rgba(55, 16, 4, 0.58) 100%),
+    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08), transparent 50%);
 }
 .hero-bleed__content {
   position: relative;
@@ -374,7 +374,7 @@ p { margin: 0 0 1em; }
   font-size: clamp(4.5rem, 16vw, 9.5rem);
   line-height: 0.85;
   margin: 0 0 0.2em;
-  color: var(--cream);
+  color: var(--white);
   text-shadow: 0 2px 24px rgba(55, 16, 4, 0.25);
   animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -384,6 +384,7 @@ p { margin: 0 0 1em; }
   font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   max-width: 28ch;
   margin: 0 0 1.5rem;
+  color: var(--white);
   animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
 }
 .hero-bleed .btn-row {
@@ -460,11 +461,11 @@ p { margin: 0 0 1em; }
 .btn-ghost:hover { background: var(--white); }
 .btn-ghost-light {
   background: transparent;
-  color: var(--cream);
-  border-color: var(--cream);
+  color: var(--white);
+  border-color: var(--white);
 }
 .btn-ghost-light:hover {
-  background: var(--cream);
+  background: var(--white);
   color: var(--mahogany);
 }
 
@@ -625,7 +626,7 @@ p { margin: 0 0 1em; }
   min-height: min(70vh, 620px);
   display: grid;
   align-items: end;
-  color: var(--cream);
+  color: var(--white);
   overflow: hidden;
 }
 .image-band__media {
@@ -649,7 +650,7 @@ p { margin: 0 0 1em; }
 }
 .image-band__content h2 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  color: var(--cream);
+  color: var(--white);
   max-width: 16ch;
 }
 .image-band__content p {
