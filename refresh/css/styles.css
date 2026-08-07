@@ -17,7 +17,7 @@
    groovy wordmark and the mascot instead of reading as the same brand. */
 @font-face {
   font-family: "Fraunces";
-  src: url("../assets/fonts/Fraunces.woff2") format("woff2");
+  src: url("../../assets/fonts/Fraunces.woff2") format("woff2");
   font-weight: 400 800;
   font-style: normal;
   font-display: swap;
@@ -28,27 +28,27 @@
    smallest, which matters given it is licensed separately from the rest. */
 @font-face {
   font-family: "Genty";
-  src: url("../assets/fonts/Genty.woff2") format("woff2");
+  src: url("../../assets/fonts/Genty.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Teachers";
-  src: url("../assets/fonts/Teachers.woff2") format("woff2");
+  src: url("../../assets/fonts/Teachers.woff2") format("woff2");
   font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Teachers";
-  src: url("../assets/fonts/Teachers-Italic.woff2") format("woff2");
+  src: url("../../assets/fonts/Teachers-Italic.woff2") format("woff2");
   font-weight: 400 800;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter Italic";
-  src: url("../assets/fonts/Inter-Italic.woff2") format("woff2");
+  src: url("../../assets/fonts/Inter-Italic.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -144,21 +144,22 @@ p { margin: 0 0 1em; }
   color: var(--cream);
   position: relative;
   z-index: 60;
+  border-bottom: 1px solid rgba(245, 240, 202, 0.18);
 }
 .announcement-bar__inner {
   position: relative;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding: 0.7rem var(--pad);
+  padding: 0.35rem var(--pad);
   text-align: center;
-  min-height: 2.55rem;
+  min-height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .announcement-bar__announcements {
   position: relative;
-  min-height: 1.4em;
+  min-height: 1.15em;
   width: 100%;
 }
 .announcement {
@@ -184,9 +185,9 @@ p { margin: 0 0 1em; }
   text-decoration: none;
   font-family: var(--font-accent);
   font-style: italic;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  line-height: 1.35;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
 }
 .announcement__link:hover { opacity: 0.85; }
 .announcement-bar__controls {
@@ -224,6 +225,8 @@ p { margin: 0 0 1em; }
   top: 0.65rem;
   z-index: 50;
   padding-inline: var(--pad);
+  /* Clear air between announcement bar and the menu pill. */
+  margin-top: 0.75rem;
   margin-bottom: 0.65rem;
 }
 /* Pull the home hero up under the sticky header, café-matcha style. */
@@ -231,7 +234,8 @@ p { margin: 0 0 1em; }
   margin-bottom: 0;
 }
 .page-home main {
-  margin-top: calc(-1 * (3.15rem + 0.65rem));
+  /* Cover header block + the air gap under the announcement. */
+  margin-top: calc(-1 * (3.15rem + 0.75rem));
 }
 .navbar {
   max-width: var(--maxw);
@@ -328,7 +332,7 @@ p { margin: 0 0 1em; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 0.8rem 1rem; text-align: center; }
   .page-home main {
-    margin-top: calc(-1 * (3rem + 0.65rem));
+    margin-top: calc(-1 * (3rem + 0.75rem));
   }
 }
 
@@ -404,7 +408,8 @@ p { margin: 0 0 1em; }
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 22s linear infinite;
+  /* Slower crawl — café matcha-style presence without the rush. */
+  animation: marquee-scroll 55s linear infinite;
   will-change: transform;
 }
 .marquee-group {
@@ -822,14 +827,10 @@ p { margin: 0 0 1em; }
   border-top: 2px solid var(--black);
   overflow: hidden;
 }
+/* Texture layer kept in markup for optional use, but disabled —
+   the pattern fights the cream wordmark and newsletter fields. */
 .footer-texture {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(55, 16, 4, 0.88), rgba(55, 16, 4, 0.94)),
-    url("../assets/img/brand-pattern-poster.jpg") center / cover;
-  opacity: 1;
-  pointer-events: none;
+  display: none;
 }
 .footer-inner { position: relative; z-index: 1; }
 .footer-main {
