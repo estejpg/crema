@@ -149,12 +149,17 @@ p { margin: 0 0 1em; }
   position: relative;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding: 0.65rem var(--pad);
+  padding: 0.7rem var(--pad);
   text-align: center;
+  min-height: 2.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .announcement-bar__announcements {
   position: relative;
-  min-height: 1.35em;
+  min-height: 1.4em;
+  width: 100%;
 }
 .announcement {
   position: absolute;
@@ -221,12 +226,12 @@ p { margin: 0 0 1em; }
   padding-inline: var(--pad);
   margin-bottom: 0.65rem;
 }
+/* Pull the home hero up under the sticky header, café-matcha style. */
 .page-home .site-header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(2.4rem + 0.65rem);
   margin-bottom: 0;
+}
+.page-home main {
+  margin-top: calc(-1 * (3.15rem + 0.65rem));
 }
 .navbar {
   max-width: var(--maxw);
@@ -319,11 +324,12 @@ p { margin: 0 0 1em; }
     padding: 0.75rem;
     box-shadow: 0 12px 28px rgba(55, 16, 4, 0.12);
   }
-  .site-header { position: sticky; }
-  .page-home .site-header { position: absolute; }
   .navbar { position: relative; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 0.8rem 1rem; text-align: center; }
+  .page-home main {
+    margin-top: calc(-1 * (3rem + 0.65rem));
+  }
 }
 
 /* ============================================================
