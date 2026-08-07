@@ -12,10 +12,11 @@ Serve the repo root with any static file server and open the pages in a browser.
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/index.html`. `python3` is preinstalled in the environment.
+Then visit `http://localhost:8000/`. Root routes assign an A/B bucket via `js/ab.js` and redirect into `/control/` or `/refresh/`.
 
-- Pages: `index.html`, `menu.html`, `about.html`, `visit.html`. Shared behavior lives in `js/main.js`; all styling in `css/styles.css`.
-- Non-obvious: navigation links across the pages use in-page anchors/section jumps, so on the homepage they scroll rather than always loading a separate document.
-- The newsletter form has no backend — on submit `js/main.js` replaces it in-place with a confirmation message. Don't expect a network request.
-- Open `index.html` via the HTTP server (not `file://`) so the self-hosted woff2 fonts in `assets/fonts/` and images in `assets/img/` load correctly.
-- There are no automated tests or linters to run; verify changes by loading the affected page in the browser.
+- **control** — original layout, updated nav labels. Files under `control/`.
+- **refresh** — café-matcha–inspired layout. Files under `refresh/`.
+- Shared media: `assets/`. Force a bucket with `?v=control` or `?v=refresh`.
+- The newsletter form has no backend — on submit each variant’s `js/main.js` replaces it in-place with a confirmation message.
+- Open pages via the HTTP server (not `file://`) so self-hosted woff2 fonts and images load correctly.
+- There are no automated tests or linters to run; verify changes by loading the affected variant page in the browser.
