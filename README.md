@@ -8,10 +8,12 @@ Warm, contemporary, and inviting, built as a fast, dependency-free static site.
 
 | Page | File | Purpose |
 | --- | --- | --- |
-| Home | `index.html` | Hero, featured drinks, matcha story, atmosphere, visit teaser |
+| Home | `index.html` | Announcement bar, full-bleed hero, scrolling banner, drink carousel, story bands |
 | Menu | `menu.html` | Full espresso / matcha / tea menu with prices |
 | About | `about.html` | Story, craft, and neighborhood |
 | Visit | `visit.html` | Map, address, hours, parking notes |
+
+Homepage hierarchy is adapted from [café matcha](https://cafe-matcha.com) (announcement → sticky header → full-bleed hero → scrolling banner → portrait product list → textured footer), expressed in crema’s palette and type.
 
 ## Stack
 
